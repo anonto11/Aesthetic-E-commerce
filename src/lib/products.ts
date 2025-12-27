@@ -1,0 +1,455 @@
+// Product Data — Curated collection of artisanal treasures
+// Each piece tells a story, crafted with intention
+
+export interface Product {
+  id: string;
+  name: string;
+  artist: string;
+  price: number;
+  category: 'jewelry' | 'ceramics' | 'prints' | 'textiles' | 'found-objects';
+  image: string;
+  images: string[];
+  description: string;
+  backstory: string;
+  materials: string[];
+  dimensions: string;
+  rating: number;
+  reviews: number;
+  inStock: boolean;
+  featured: boolean;
+}
+
+export const products: Product[] = [
+  {
+    id: 'moon-phase-pendant',
+    name: 'Moon Phase Pendant',
+    artist: 'Elena Vasquez',
+    price: 285,
+    category: 'jewelry',
+    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
+      'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800',
+    ],
+    description: 'Hand-forged sterling silver pendant capturing the eternal dance of lunar cycles.',
+    backstory: 'Elena spent three months studying the night sky from her coastal studio, sketching moon phases until the design revealed itself at 3am on a foggy October morning.',
+    materials: ['Sterling silver', 'Moonstone cabochon'],
+    dimensions: '2.5cm diameter',
+    rating: 4.9,
+    reviews: 47,
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: 'fractured-vessel',
+    name: 'Fractured Vessel',
+    artist: 'Kenji Watanabe',
+    price: 420,
+    category: 'ceramics',
+    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800',
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800',
+    ],
+    description: 'Wabi-sabi inspired ceramic vessel with intentional fractures filled with gold.',
+    backstory: 'Each crack is a meditation on impermanence. Kenji drops the unfired vessel from exactly 47 inches, then repairs what breaks with 24k gold — no two pieces share the same story.',
+    materials: ['Stoneware clay', '24k gold', 'Natural glazes'],
+    dimensions: '18cm x 12cm',
+    rating: 5.0,
+    reviews: 23,
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: 'echo-print-i',
+    name: 'Echo Print I',
+    artist: 'Marina Delacroix',
+    price: 175,
+    category: 'prints',
+    image: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800',
+      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800',
+    ],
+    description: 'Limited edition risograph print exploring the space between sound and silence.',
+    backstory: 'Marina recorded ocean waves for 72 hours, then translated the sound frequencies into visual forms using a custom algorithm she refuses to explain.',
+    materials: ['Cotton rag paper', 'Soy-based inks'],
+    dimensions: '40cm x 60cm',
+    rating: 4.7,
+    reviews: 89,
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: 'woven-memory',
+    name: 'Woven Memory',
+    artist: 'Sofia Andersson',
+    price: 340,
+    category: 'textiles',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
+    ],
+    description: 'Hand-woven wall hanging incorporating threads from vintage textiles.',
+    backstory: 'Sofia collects fragments from her grandmother\'s sewing box, estate sales, and abandoned textile factories — each thread carries a life before this one.',
+    materials: ['Vintage cotton', 'Silk threads', 'Wool roving'],
+    dimensions: '45cm x 90cm',
+    rating: 4.8,
+    reviews: 34,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'tide-totem',
+    name: 'Tide Totem',
+    artist: 'Marcus Chen',
+    price: 195,
+    category: 'found-objects',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
+      'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800',
+    ],
+    description: 'Sculptural assemblage of ocean-tumbled glass and weathered driftwood.',
+    backstory: 'Marcus walks the same stretch of beach every morning at low tide. This piece contains exactly 143 walks worth of found treasures.',
+    materials: ['Sea glass', 'Driftwood', 'Copper wire'],
+    dimensions: '25cm x 15cm x 8cm',
+    rating: 4.6,
+    reviews: 56,
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: 'oxidized-cuff',
+    name: 'Oxidized Cuff',
+    artist: 'Elena Vasquez',
+    price: 320,
+    category: 'jewelry',
+    image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800',
+      'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800',
+    ],
+    description: 'Hammered copper cuff with controlled patina creating unique surface patterns.',
+    backstory: 'Elena buries each cuff in her garden for exactly 21 days, letting the earth decide its final appearance.',
+    materials: ['Copper', 'Natural patina'],
+    dimensions: '6cm wide',
+    rating: 4.9,
+    reviews: 38,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'ash-bowl',
+    name: 'Ash Bowl',
+    artist: 'Kenji Watanabe',
+    price: 280,
+    category: 'ceramics',
+    image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800',
+      'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800',
+    ],
+    description: 'Wood-fired bowl with natural ash glaze from 72-hour kiln firing.',
+    backstory: 'Kenji tends the kiln without sleep, feeding it oak and cherry wood. The ash flies and lands where it wishes, creating glazes no human hand could plan.',
+    materials: ['Local clay', 'Wood ash glaze'],
+    dimensions: '14cm diameter',
+    rating: 4.8,
+    reviews: 29,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'echo-print-ii',
+    name: 'Echo Print II',
+    artist: 'Marina Delacroix',
+    price: 190,
+    category: 'prints',
+    image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800',
+      'https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=800',
+    ],
+    description: 'The second in the Echo series — forest sounds translated to form.',
+    backstory: 'After the ocean, Marina moved to the mountains. She recorded the silence between trees and found it was never truly silent.',
+    materials: ['Japanese kozo paper', 'Natural pigments'],
+    dimensions: '50cm x 70cm',
+    rating: 4.9,
+    reviews: 67,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'thread-meditation',
+    name: 'Thread Meditation',
+    artist: 'Sofia Andersson',
+    price: 485,
+    category: 'textiles',
+    image: 'https://images.unsplash.com/photo-1596568635206-30de4e2a8ba2?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1596568635206-30de4e2a8ba2?w=800',
+      'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800',
+    ],
+    description: 'Large-scale textile installation exploring the meditative act of making.',
+    backstory: 'This piece took 400 hours. Sofia worked in silence, letting the rhythm of the loom become a form of prayer.',
+    materials: ['Organic cotton', 'Hand-dyed silk', 'Linen'],
+    dimensions: '120cm x 180cm',
+    rating: 5.0,
+    reviews: 12,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'rust-relic',
+    name: 'Rust Relic',
+    artist: 'Marcus Chen',
+    price: 245,
+    category: 'found-objects',
+    image: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800',
+      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
+    ],
+    description: 'Oxidized metal fragments arranged in a study of beautiful decay.',
+    backstory: 'Marcus found these pieces in an abandoned shipyard. Each rust pattern tells a story of salt, time, and slow surrender.',
+    materials: ['Reclaimed steel', 'Natural rust', 'Reclaimed wood base'],
+    dimensions: '30cm x 20cm',
+    rating: 4.7,
+    reviews: 43,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'seed-pod-earrings',
+    name: 'Seed Pod Earrings',
+    artist: 'Elena Vasquez',
+    price: 165,
+    category: 'jewelry',
+    image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800',
+      'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800',
+    ],
+    description: 'Delicate bronze cast from actual eucalyptus seed pods.',
+    backstory: 'Elena casts from pods she collects after storms. Each pair comes from a single tree, keeping its family together.',
+    materials: ['Bronze', 'Gold fill ear wires'],
+    dimensions: '3cm drop',
+    rating: 4.8,
+    reviews: 72,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'crackle-vase',
+    name: 'Crackle Vase',
+    artist: 'Kenji Watanabe',
+    price: 380,
+    category: 'ceramics',
+    image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=800',
+      'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800',
+    ],
+    description: 'Raku-fired vase with dramatic crackle glaze in deep indigo.',
+    backstory: 'The crackle happens in the moment between fire and air. Kenji says he\'s just a witness to the transformation.',
+    materials: ['Raku clay', 'Copper-based glaze'],
+    dimensions: '22cm tall',
+    rating: 4.9,
+    reviews: 31,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'layered-land',
+    name: 'Layered Land',
+    artist: 'Marina Delacroix',
+    price: 220,
+    category: 'prints',
+    image: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800',
+      'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800',
+    ],
+    description: 'Multi-layer screen print depicting geological time in abstracted strata.',
+    backstory: 'Marina spent a summer in the desert, collecting rock samples and translating their colors into ink.',
+    materials: ['Archival paper', 'Water-based inks'],
+    dimensions: '45cm x 60cm',
+    rating: 4.6,
+    reviews: 51,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'indigo-throw',
+    name: 'Indigo Throw',
+    artist: 'Sofia Andersson',
+    price: 295,
+    category: 'textiles',
+    image: 'https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800',
+      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+    ],
+    description: 'Hand-dyed indigo blanket using centuries-old Japanese shibori techniques.',
+    backstory: 'Sofia apprenticed with a master dyer in Tokushima. This throw was dipped 37 times to achieve its depth.',
+    materials: ['Organic cotton', 'Natural indigo'],
+    dimensions: '150cm x 200cm',
+    rating: 4.9,
+    reviews: 28,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'memory-box',
+    name: 'Memory Box',
+    artist: 'Marcus Chen',
+    price: 175,
+    category: 'found-objects',
+    image: 'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?w=800',
+      'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800',
+    ],
+    description: 'Miniature shadow box containing curated fragments of forgotten stories.',
+    backstory: 'Each box contains items from a single estate sale — buttons, letters, pressed flowers — pieces of a life preserved.',
+    materials: ['Reclaimed wood', 'Found objects', 'Museum glass'],
+    dimensions: '12cm x 15cm x 4cm',
+    rating: 4.8,
+    reviews: 64,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'river-stone-ring',
+    name: 'River Stone Ring',
+    artist: 'Elena Vasquez',
+    price: 210,
+    category: 'jewelry',
+    image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800',
+      'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
+    ],
+    description: 'Sterling silver ring cradling a perfectly smoothed river stone.',
+    backstory: 'Elena found this stone in a creek in northern Japan. It took the water a thousand years to make it this shape.',
+    materials: ['Sterling silver', 'Natural river stone'],
+    dimensions: 'Sizes 5-9 available',
+    rating: 4.7,
+    reviews: 45,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'spiral-platter',
+    name: 'Spiral Platter',
+    artist: 'Kenji Watanabe',
+    price: 340,
+    category: 'ceramics',
+    image: 'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800',
+      'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800',
+    ],
+    description: 'Large serving platter with hand-carved spiral pattern and matte glaze.',
+    backstory: 'The spiral is carved in a single sitting, without pause. If Kenji loses concentration, he starts over.',
+    materials: ['Porcelain', 'Ash glaze'],
+    dimensions: '35cm diameter',
+    rating: 4.9,
+    reviews: 19,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'night-garden',
+    name: 'Night Garden',
+    artist: 'Marina Delacroix',
+    price: 245,
+    category: 'prints',
+    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800',
+      'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800',
+    ],
+    description: 'Monochrome botanical study printed on handmade paper.',
+    backstory: 'Marina grew these plants from seed, then pressed them at the peak of their bloom to capture their shadows.',
+    materials: ['Handmade mulberry paper', 'Carbon-based ink'],
+    dimensions: '35cm x 50cm',
+    rating: 4.8,
+    reviews: 39,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'patchwork-pillow',
+    name: 'Patchwork Pillow',
+    artist: 'Sofia Andersson',
+    price: 145,
+    category: 'textiles',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
+      'https://images.unsplash.com/photo-1596568635206-30de4e2a8ba2?w=800',
+    ],
+    description: 'Pillow cover assembled from vintage fabric scraps in harmonious disarray.',
+    backstory: 'No two pillows are alike. Sofia sees fabric combinations in dreams and recreates them upon waking.',
+    materials: ['Vintage cotton', 'Linen backing', 'Organic fill'],
+    dimensions: '45cm x 45cm',
+    rating: 4.6,
+    reviews: 83,
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: 'horizon-mobile',
+    name: 'Horizon Mobile',
+    artist: 'Marcus Chen',
+    price: 385,
+    category: 'found-objects',
+    image: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800',
+    images: [
+      'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800',
+      'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?w=800',
+    ],
+    description: 'Kinetic sculpture balanced on found driftwood, moving with the slightest breath.',
+    backstory: 'Marcus spent six months finding the exact center of gravity. The mobile responds to your presence, turning toward you as you enter the room.',
+    materials: ['Driftwood', 'Brass', 'Sea glass', 'Copper wire'],
+    dimensions: '60cm x 40cm',
+    rating: 5.0,
+    reviews: 17,
+    inStock: true,
+    featured: false,
+  },
+];
+
+export const categories = [
+  { id: 'jewelry', name: 'Jewelry', icon: '◇' },
+  { id: 'ceramics', name: 'Ceramics', icon: '◯' },
+  { id: 'prints', name: 'Prints', icon: '▢' },
+  { id: 'textiles', name: 'Textiles', icon: '≋' },
+  { id: 'found-objects', name: 'Found Objects', icon: '✧' },
+] as const;
+
+export function getProductById(id: string): Product | undefined {
+  return products.find(p => p.id === id);
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  if (category === 'all') return products;
+  return products.filter(p => p.category === category);
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter(p => p.featured);
+}
+
+export function searchProducts(query: string): Product[] {
+  const lower = query.toLowerCase();
+  return products.filter(
+    p =>
+      p.name.toLowerCase().includes(lower) ||
+      p.artist.toLowerCase().includes(lower) ||
+      p.description.toLowerCase().includes(lower) ||
+      p.category.toLowerCase().includes(lower)
+  );
+}
